@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: bebop_teleoperation
+Description: Description of bebop_teleoperation
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
