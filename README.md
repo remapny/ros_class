@@ -1,7 +1,7 @@
 # 설치하기
 설치하기 내용은 다음과 같이 구성되어 있습니다.
 -------------
-1. ROS 설치하기
+1. __ROS 설치하기__
     * ROS설치 명령어는 다음과 같이 수행합니다.
         ```s
         $ cd 01_install_ros
@@ -9,7 +9,7 @@
         $ ./install_ros_kinetic.sh
         ```
 
-2. sphinx 설치 및 실행하기
+2. __sphinx 설치 및 실행하기__
     * sphinx 설치 명령어는 다음과 같이 실행합니다.
         ```sh
         $ cd ros_class/02_install_sphinx
