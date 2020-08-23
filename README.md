@@ -25,3 +25,26 @@
         $ cd ~/
         $ ./sphinx_bebop2.sh
         ```
+
+3. __bebop_autonomy 설치하기__
+    * bebop autonomy 설치는 다음과 같이 진행합니다.
+        ```sh
+        $ sudo apt-get install build-essential python-rosdep python-catkin-tools
+        $ cd ~/catkin_ws/src
+        $ git clone https://github.com/jungsuyun/bebop_autonomy.git
+        $ rosdep update
+        $ cd ~/catkin_ws/
+        $ rosdep install --from-paths src -i
+        $ catkin_make
+        ```
+    * 설치가 완료되었다면 bashrc폴더에서 본안의 hostname, master_uri를 수정 후 실행합니다.
+        * sphinx 상에서 실행하는 경우
+            ```sh
+            $ roscore
+            $ roslaunch bebop_driver bebop_driver_sphinx.launch
+            ```
+        * 실제 드론과 연결하는 경우
+            ```sh
+            $ roscore
+            $ roslaunch bebop_driver bebop_driver.launch
+            ```
