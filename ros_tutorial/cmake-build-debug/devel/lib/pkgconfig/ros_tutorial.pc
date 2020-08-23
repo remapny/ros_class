@@ -1,0 +1,8 @@
+prefix=/home/jungsu/catkin_ws/src/ros_tutorial/cmake-build-debug/devel
+
+Name: ros_tutorial
+Description: Description of ros_tutorial
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
