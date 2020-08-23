@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: takeoff_and_land
+Description: Description of takeoff_and_land
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

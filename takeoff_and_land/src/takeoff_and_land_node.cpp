@@ -1,6 +1,3 @@
-# Simple Publisher
-## __source code__
-```c++
 #include <ros/ros.h>
 #include <std_msgs/Empty.h>
 
@@ -57,7 +54,3 @@ int main(int argc, char** argv)
 
     return 0;
 }
-```
-
-# __실행화면__
-<!-- ![스크린샷, 2020-08-23 16-01-41](https://user-images.githubusercontent.com/69963988/90973128-01e7b080-e55a-11ea-984d-f00186d74aff.png) -->
