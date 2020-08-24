@@ -12,4 +12,5 @@
     * simple publisher에서 발행되는 /hellro_ros 토픽을 subsribe하여 화면에 출력하기
 6. __get pose Data(C++)__
     * aruco_ros 패키지에서 발행되는 pose값을 subscribe해서 화면에 출력하기.
-    
+7. __get marker Data(C++)
+    * aruco_ros 패키지에서 발행되는 pose, marker_id값을 subscribe하여 화면에 출력하기
