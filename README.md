@@ -8,5 +8,3 @@
     * geometry_msgs/Twist 를 이용하여 linearX값 제어하기
 4. __bebop_teleopration(C++)__
     * 2번과 3번을 응용하여 bebop drone의 제어 코드 구현하기
-5. __Simple Subscriber(C++)__
-    * simple publisher에서 발행되는 /hellro_ros 토픽을 subsribe하여 화면에 출력하기
