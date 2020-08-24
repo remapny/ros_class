@@ -1,0 +1,8 @@
+prefix=/home/jungsu/catkin_ws/src/get_aurco_pose/cmake-build-debug/devel
+
+Name: get_aurco_pose
+Description: Description of get_aurco_pose
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
