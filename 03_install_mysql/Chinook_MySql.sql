@@ -1,4 +1,4 @@
-AlbumCREATE DATABASE `Chinook`;
+CREATE DATABASE `Chinook`;
 
 
 USE `Chinook`;
