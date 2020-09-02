@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: bebop_logger
+Description: Description of bebop_logger
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
