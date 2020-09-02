@@ -1,0 +1,8 @@
+
+
+include(FindPkgConfig)
+pkg_check_modules(LIBMYSQLCLIENT REQUIRED mysqlclient)
+
+link_directories(${LIBMYSQLCLIENT_LIBRARY_DIRS})
+
+target_link_libraries(untitled ${LIBMYSQLCLIENT_LIBRARIES})
