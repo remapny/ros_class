@@ -1,9 +1,18 @@
 #include "Logger.h"
 
-Logger::Logger(int argc, char **argv)
-{
+Logger::Logger(int argc, char **argv, const char* drone_name, DroneInfo droneInfo, Status status) : droneInfo(droneInfo), status(status) {
     this->init_argc = argc;
     this->init_argv = argv;
+
+    this->droneName = drone_name;
+
+    this->droneInfo = DroneInfo("localhost", "root", "wjdtn1940", "mydb", 3306);
+    this->status = Status("localhost", "root", "wjdtn1940", "mydb", 3306);
+    this->droneId = droneInfo.get_DroneId_by_Name(this->droneName);
+
+    this->latitude = this->longitude = this->altitude = this->percent = 0;
+
+    this->status_cnt = 1;
 }
 
 void Logger::init()
@@ -14,6 +23,14 @@ void Logger::init()
     this->battery_sub = nh.subscribe("/bebop/states/common/CommonState/BatteryStateChanged", 1, &Logger::batteryCallback, this);
     this->odom_sub = nh.subscribe("/bebop/odom", 1, &Logger::odometryCallback, this);
     this->position_sub = nh.subscribe("/bebop/states/ardrone3/PilotingState/PositionChanged", 1, &Logger::positionCallback, this);
+
+    while(ros::ok())
+    {
+        ros::spinOnce();
+
+        this->status.insert_status(this->status_cnt, this->droneId, this->latitude, this->longitude, this->altitude, this->percent);
+        this->status_cnt++;
+    }
 }
 
 void

@@ -51,7 +51,7 @@ int DroneInfo::get_DroneId_by_Name(const char *droneName)
             while((sql_row = mysql_fetch_row(sql_result)) != NULL)
                 for(int i = 0 ; i < sql_result->field_count ; i++)
                     droneId = atoi(sql_row[i]);
-            
+            mysql_free_result(sql_result);
         }
     }
     mysql_close(connection);
@@ -66,4 +66,3 @@ DroneInfo::DroneInfo(const char *host, const char *user, const char *pw, const c
     this->port = port;
     this->db = db;
 }
-

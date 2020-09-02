@@ -22,6 +22,8 @@ private:
     MYSQL_ROW sql_row;
     MYSQL_FIELD sql_field;
 
+
+
 public:
     DroneInfo(int droneId, const char* droneName, const char* host, const char* user, const char* pw, const char* db, int port);
     DroneInfo(const char* host, const char* user, const char* pw, const char* db, int port);

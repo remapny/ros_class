@@ -7,6 +7,9 @@
 #include <bebop_msgs/Ardrone3PilotingStatePositionChanged.h>
 #include <iostream>
 
+#include "Status.h"
+#include "DroneInfo.h"
+
 class Logger
 {
 private:
@@ -33,14 +36,20 @@ private:
     double longitude;
     double altitude;
 
+    DroneInfo droneInfo;
+    Status status;
+
+    int status_cnt;
+    const char* droneName;
+    int droneId;
+
 public:
-    Logger(int argc, char** argv);
+    Logger(int argc, char **argv, const char* drone_name, DroneInfo droneInfo, Status status);
     void init();
     void batteryCallback(const bebop_msgs::CommonCommonStateBatteryStateChanged::ConstPtr& msg);
     void odometryCallback(const nav_msgs::Odometry::ConstPtr& msg);
     void positionCallback(const bebop_msgs::Ardrone3PilotingStatePositionChanged::ConstPtr& msg);
 
 };
-
 
 #endif //BEBOP_LOGGER_LOGGER_H

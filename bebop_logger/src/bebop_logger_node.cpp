@@ -1,11 +1,10 @@
-#include "DroneInfo.h"
-#include "Status.h"
 #include <iostream>
+#include "Logger.h"
 
-int main()
+int main(int argc, char** argv)
 {
-    Status status = Status("localhost", "root", "wjdtn1940", "mydb", 3306);
-    status.insert_status(1, 1, 36.5204, 127.1731, 10, 100);
+    Logger logger = Logger(argc, argv, "Bebop", DroneInfo(0, nullptr, nullptr, nullptr, nullptr, nullptr, 0), Status(nullptr, nullptr, nullptr, nullptr, 0));
+    logger.init();
 
     return 0;
 }
